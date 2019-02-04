@@ -7,7 +7,7 @@
 2. install dev deps (you could also use yarn)
 
     ```
-    npm i stylelint-config-airbnb stylelint-order stylelint-scss -d
+    npm i stylelint stylelint-config-airbnb stylelint-order stylelint-scss -d
     ```
 3. Create stylelint file
    ```
@@ -33,7 +33,7 @@
 2. install deps globally
 
     ```
-    npm i eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint -g
+    npm i stylelint stylelint-config-airbnb stylelint-order stylelint-scss -g
     ```
 3. Create stylelint file in `<your name>$`
    ```
