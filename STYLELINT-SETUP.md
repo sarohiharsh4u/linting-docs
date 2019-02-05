@@ -51,5 +51,12 @@ Setup Stylelint with Airbnb CSS / Sass Style Guide
     }
     ```
 
+ 
+You can run StyleLint on any file or directory like this:
+   
+   ```
+   stylelint yourfile.css
+   ```
+
 [Airbnb CSS / Sass Style Guide](https://github.com/airbnb/css "Airbnb CSS / Sass Style Guide")
 

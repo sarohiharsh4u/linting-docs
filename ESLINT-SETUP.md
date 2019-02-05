@@ -62,5 +62,10 @@ Setup ESLint with Airbnb JavaScript Style Guide
     }*/
     }
     ```
-
+You can run ESLint on any file or directory like this:
+   
+   ```
+   eslint yourfile.js
+   ```
+   
 [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript "Airbnb JavaScript Style Guide")
