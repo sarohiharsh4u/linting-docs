@@ -1,4 +1,6 @@
 
+Setup Stylelint with Airbnb CSS / Sass Style Guide
+======
 
  This sets up stylelint for one project
  --
@@ -48,4 +50,6 @@
      "rules": {}
     }
     ```
+
+[Airbnb CSS / Sass Style Guide](https://github.com/airbnb/css "Airbnb CSS / Sass Style Guide")
 

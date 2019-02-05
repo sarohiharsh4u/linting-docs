@@ -1,4 +1,6 @@
 
+Setup ESLint with Airbnb JavaScript Style Guide
+======
 
  This sets up eslint for one project
  --
@@ -61,3 +63,4 @@
     }
     ```
 
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript "Airbnb JavaScript Style Guide")
