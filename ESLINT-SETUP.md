@@ -19,11 +19,22 @@ Setup ESLint with Airbnb JavaScript Style Guide
 
     ```js
 
-    {
+   {
     "extends": "airbnb",
     "plugins": [
         "react"
-    ]
+    ],
+    "parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"impliedStrict": true,
+			"globalReturn": false,
+			"jsx": true
+		}
+	},
+   "parser": "babel-eslint"
    /* "rules": {
         "max-len":"off",
         "func-names": ["error", "never"]
@@ -55,7 +66,18 @@ Setup ESLint with Airbnb JavaScript Style Guide
     "extends": "airbnb",
     "plugins": [
         "react"
-    ]
+    ],
+    "parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"impliedStrict": true,
+			"globalReturn": false,
+			"jsx": true
+		}
+	},
+   "parser": "babel-eslint"
    /* "rules": {
         "max-len":"off",
         "func-names": ["error", "never"]
