@@ -9,7 +9,7 @@ Setup ESLint with Airbnb JavaScript Style Guide
 2. install our dev deps (you could also use yarn)
 
     ```
-    npm i eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint -d
+    npm i eslint@latest eslint-config-airbnb@latest eslint-plugin-import@latest eslint-plugin-jsx-a11y@latest eslint-plugin-react@latest babel-eslint -d
     ```
 3. Create eslint file
    ```
@@ -52,7 +52,7 @@ Setup ESLint with Airbnb JavaScript Style Guide
 2. install deps globally
 
     ```
-    npm i eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-eslint -g
+    npm i eslint@latest eslint-config-airbnb@latest eslint-plugin-import@latest eslint-plugin-jsx-a11y@latest eslint-plugin-react@latest babel-eslint -g
     ```
 3. Create eslint file in `<your name>$`
    ```
