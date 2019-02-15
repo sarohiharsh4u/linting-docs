@@ -327,3 +327,17 @@ export default Root;
 
 ```
 
+17. HTML5 API's undefined (localStorage, FileReader) (no-undef)
+
+```js
+//Good Code
+
+/*global localStorage*/
+
+or add global in eslint config
+
+"global":{
+    "localStorage":"writeable"
+}
+
+```
