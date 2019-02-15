@@ -323,6 +323,7 @@ const Root = (props) => {
     </div>
   );
 };
+export default Root;
 
 ```
 
