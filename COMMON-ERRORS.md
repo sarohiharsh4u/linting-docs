@@ -337,7 +337,7 @@ export default Root;
 or add global in eslint config
 
 "global":{
-    "localStorage":"writeable"
+    "localStorage":"readable"
 }
 
 ```
