@@ -138,7 +138,7 @@ function foo(bar) {
 ```
 
        
-11. Unnecessarily quoted property					               quote-prop
+11. Unnecessarily quoted property					               (quote-prop)
 
 ```js
 //Examples of incorrect code for this rule
