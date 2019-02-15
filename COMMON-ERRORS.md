@@ -20,7 +20,14 @@ import { isAuthenticated, getObjectValue, httpStatusCodes } from './common';
 
  // Bad Code
 
-{(Component) => Component === null     ? <div className="center"> <Loader         type="Puff"         color="#00BFFF"         height="100"         width="100"     /></div>     : <Component {...props} />}
+  {(Component) => Component === null
+            ? <div className="center"> <Loader
+                type="Puff"
+                color="#00BFFF"
+                height="100"
+                width="100"
+            /></div>
+            : <Component {...props} />}
 
 //Good code
 
@@ -94,19 +101,25 @@ Fix: Remove unused variables
 
 8. This rule is aimed at flagging variables that are declared using let keyword, but never reassigned after the initial assignment. (No-const)
 
-8. we can use template literals instead of string concatenation            prefer-template
+```
+Fix: if a variable is never reassigned declare it with const
+```
 
+9. we can use template literals instead of string concatenation (prefer-template)
+
+```js
 var str = "Hello, " + name + "!";
 /*eslint-env es6*/
 
 var str = `Hello, ${name}!`;
 
 /*eslint no-param-reassign: "error"*/
+````
 
+10.  No param reassign
 
-8.  No param reassign
-
-Examples of incorrect code for this rule:
+```js
+// Examples of incorrect code for this rule:
 
 function foo(bar) {
     bar = 13;
@@ -115,18 +128,20 @@ function foo(bar) {
 function foo(bar) {
     bar++;
 }
-Examples of correct code for this rule:
+// Examples of correct code for this rule:
 /*eslint no-param-reassign: "error"*/
 
 function foo(bar) {
     var baz = bar;
 }
 
+```
+
        
-9. Unnecessarily quoted property					                quote-prop
+11. Unnecessarily quoted property					               quote-prop
 
-
-Examples of incorrect code for this rule
+```js
+//Examples of incorrect code for this rule
 
  var object = {
     foo: "bar",
@@ -134,7 +149,7 @@ Examples of incorrect code for this rule
     "qux-lorem": true
 };
 
-Correct-code:
+//Correct-code:
 
 var object1 = {
     "foo": "bar",
@@ -142,54 +157,93 @@ var object1 = {
     "qux-lorem": true
 };
 
-10. Unexpected lexical declaration in case block                                no-case-declarations
+```
+
+12. Unexpected lexical declaration in case block          (no-case-declarations)
 
 
-Bad Code
+```js
+
+
+// Bad Code
 
 case BOOKING_SOURCES_SUCCESS:    const BookingSources = getObjectValueIfEmpty(action, 'payload.data', {});   changes = {     isBookingSourcesLoading: false,     isBookingSourcesLoaded: true,     BookingSources,   };   break; 
 
-Good Code
+//Good Code
 
 // The following case clauses are wrapped into blocks using brackets
 
 
 case BOOKING_SOURCES_SUCCESS: {   const BookingSources = getObjectValueIfEmpty(action, 'payload.data', {});   changes = {     isBookingSourcesLoading: false,     isBookingSourcesLoaded: true,     BookingSources,   };   break; }
+```
 
-11. Unexpected block statement surrounding arrow body                 arrow-body-style
+13. Unexpected block statement surrounding arrow body                 (arrow-body-style)
 
+```js
 
-
-Incorrect Code
+//Incorrect Code
 
 let foo = () => {
     return 0;
 };
 
-Correct Code
+//Correct Code
 
 let foo = () => 0;
 let foo = () => ({ foo: 0 });
 
- 12. Useless Constructor	 										no-useless-constructor
+```
 
-Bad Code
+ 14. Useless Constructor	 						(no-useless-constructor)
+
+```js
+//Bad Code
 
 
-class Root extends React.Component {   constructor(props) {     super(props);   }    render() {     return (       <div className="table-wrapper mt-xl-5">         <Header title="Manage Blacklist" />             </div>     );   } }  export default Root;
+class Root extends React.Component {   
+
+    constructor(props) {  
+           super(props);  
+     }   
+      render() {    
+           return (      
+               <div className="table-wrapper mt-xl-5">       <Header title="Manage Blacklist" />     
+                       </div>    
+                );   
+                }
+                 }  
+                
+    export default Root;
 
 
-Good Code
+//Good Code
 
-class Root extends React.Component {     render() {     return (       <div className="table-wrapper mt-xl-5">         <Header title="Manage Blacklist" />         </div>     );   } }  export default Root; 
+class Root extends React.Component {    
+     render() {    
+          return (       
+              <div className="table-wrapper mt-xl-5">         <Header title="Manage Blacklist" />       
+                </div>    
+                 );  
+                 }
+                  } 
+      export default Root; 
 
-13.  Component should be written as a pure function                          react/prefer-stateless-function 
+```
 
-Bad Code:
+15.  Component should be written as a pure function                          react/prefer-stateless-function 
 
-class Root extends React.Component {     render() {     return (       <div className="table-wrapper mt-xl-5">         <Header title="Manage Blacklist" />         </div>     );   } }
+```js
+//Bad Code:
 
-Good Code
+class Root extends React.Component {
+     render() {   
+         return (     
+             <div className="table-wrapper mt-xl-5">         <Header title="Manage Blacklist" />         
+             </div>
+             ); 
+             }}
+
+//Good Code
 
 const Root =() => (
   <div className="table-wrapper mt-xl-5">
@@ -199,12 +253,16 @@ const Root =() => (
 );
 
 
+
 export default Root;
 
+```
 
-15. Must use destructuring props assignment                                                react/destructuring-assignment
+16. Must use destructuring props assignment                                                react/destructuring-assignment
 
-Bad Code
+```js
+
+// Bad Code
 
 const Root = props => (
   <div className="table-wrapper mt-xl-5">
@@ -232,7 +290,7 @@ const Root = props => (
 export default Root;
 
 
-Good Code
+//Good Code
 
 const Root = (props) => {
   const {
@@ -261,4 +319,5 @@ const Root = (props) => {
   );
 };
 
+```
 
