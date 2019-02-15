@@ -70,7 +70,7 @@ export default INVALID_PROPERTY;
 
 4. JSX not allowed in files with extension '.js'  (react/jsx-filename-extension)
 ```
-	Fix: Rename files using jsx to jsx form js
+Fix: Rename files using jsx to jsx form js
 ````
 
 5.  Variable is defined but never used                    (no-unused-vars)
@@ -92,10 +92,10 @@ Fix: Remove unused variables
 ```
   The default configuration ensures that the following order must be followed:
 
-   1. static methods and properties
-   2. lifecycle methods: displayName, propTypes, contextTypes, childContextTypes, mixins, statics, defaultProps, constructor, getDefaultProps, state, getInitialState, getChildContext, getDerivedStateFromProps, componentWillMount, UNSAFE_componentWillMount, componentDidMount, componentWillReceiveProps, UNSAFE_componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, UNSAFE_componentWillUpdate, getSnapshotBeforeUpdate, componentDidUpdate, componentDidCatch, componentWillUnmount (in this order).
-  3. custom methods
-  4. render method
+1. static methods and properties
+2. lifecycle methods: displayName, propTypes, contextTypes, childContextTypes, mixins, statics, defaultProps, constructor, getDefaultProps, state, getInitialState, getChildContext, getDerivedStateFromProps, componentWillMount, UNSAFE_componentWillMount, componentDidMount, componentWillReceiveProps, UNSAFE_componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, UNSAFE_componentWillUpdate, getSnapshotBeforeUpdate, componentDidUpdate, componentDidCatch, componentWillUnmount (in this order).
+3. custom methods
+4. render method
 
 ```
 
@@ -200,33 +200,36 @@ let foo = () => ({ foo: 0 });
 //Bad Code
 
 
-class Root extends React.Component {   
+class Root extends React.Component {
 
-    constructor(props) {  
-           super(props);  
-     }   
-      render() {    
-           return (      
-               <div className="table-wrapper mt-xl-5">       <Header title="Manage Blacklist" />     
-                       </div>    
-                );   
-                }
-                 }  
-                
-    export default Root;
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="table-wrapper mt-xl-5">
+                <Header title="Manage Blacklist"/>
+            </div>
+        );
+    }
+}
+
+export default Root;
 
 
 //Good Code
 
-class Root extends React.Component {    
-     render() {    
-          return (       
-              <div className="table-wrapper mt-xl-5">         <Header title="Manage Blacklist" />       
-                </div>    
-                 );  
-                 }
-                  } 
-      export default Root; 
+class Root extends React.Component {
+    render() {
+        return (
+            <div className="table-wrapper mt-xl-5">       
+                <Header title="Manage Blacklist" />
+            </div>
+        );
+    }
+}
+export default Root; 
 
 ```
 
@@ -235,13 +238,15 @@ class Root extends React.Component {   
 ```js
 //Bad Code:
 
+
 class Root extends React.Component {
-     render() {   
-         return (     
-             <div className="table-wrapper mt-xl-5">         <Header title="Manage Blacklist" />         
-             </div>
-             ); 
-             }}
+    render() {
+        return (
+            <div className="table-wrapper mt-xl-5"> 
+                <Header title="Manage Blacklist" />
+            </div>
+        );
+    }}
 
 //Good Code
 
