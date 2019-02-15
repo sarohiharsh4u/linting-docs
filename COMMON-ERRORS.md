@@ -233,7 +233,7 @@ export default Root; 
 
 ```
 
-15.  Component should be written as a pure function                          react/prefer-stateless-function 
+15.  Component should be written as a pure function                          (react/prefer-stateless-function )
 
 ```js
 //Bad Code:
