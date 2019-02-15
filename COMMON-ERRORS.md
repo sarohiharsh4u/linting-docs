@@ -341,3 +341,21 @@ or add global in eslint config
 }
 
 ```
+
+18. Prevent usage of Array index in keys (react/no-array-index-key)
+
+It's a bad idea to use the array index since it doesn't uniquely identify your elements. In cases where the array is sorted or an element is added to the beginning of the array, the index will be changed even though the element representing that index may be the same. This results in unnecessary renders.
+
+```js
+//bad code
+things.map((thing, index) => (
+  <Hello key={index} />
+));
+
+//good code
+
+things.map((thing) => (
+  <Hello key={thing.id} />
+));
+
+```
